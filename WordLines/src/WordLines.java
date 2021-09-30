@@ -1,27 +1,42 @@
-import java.util.Scanner; //import scanner!!
+
+//import scanner!!
+import java.util.Scanner;
 
 public class WordLines {
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in); // Create a Scanner object
+		// Create a Scanner object
+		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Enter phrase: "); // print out Enter phrase and ask you to type in that phrase
+		// print out Enter phrase and ask you to type in that phrase
+		System.out.println("Enter phrase: ");
 
-		String initialText = scan.nextLine(); // enter phrase and it will scan that and output the next code on the line
-		String finialText = ""; // place holder
-		int finialNum = 0; // starting number for letter count
+		// enter phrase and it will scan that and output the next code on the line
+		String initialText = scan.nextLine();
+		// place holder
+		String finialText = "";
+		// starting number for letter count
+		int finialNum = 0;
 
-		for (int i = 0; i < initialText.length(); i++) { // for every thing inside the initial text...
-			char c = initialText.charAt(i); // creating a simple data thing that will add
-			if (initialText.substring(i, i + 1).equals(" ")) { // ...if a character in the initialText string equals/is
-																// a space then ...
+		// for every thing inside the initial text...
+		for (int i = 0; i < initialText.length(); i++) {
+			// creating a simple data thing that will add
+			char c = initialText.charAt(i);
 
-				finialText += "\n"; // ... enter new line
+			// ...if a character in the initialText string equals/is
+			// a space then ...
+			if (initialText.substring(i, i + 1).equals(" ")) {
 
-			} else { // if its not a space then...
+				// ... enter new line
+				finialText += "\n";
 
-				finialText += initialText.substring(i, i + 1); // ... print out letters
-				finialNum++; //add a number to finialNum count
+				// if its not a space then...
+			} else {
+
+				// ... it should print out letters
+				finialText += initialText.substring(i, i + 1);
+				// add a number to finialNum count
+				finialNum++;
 
 			}
 
